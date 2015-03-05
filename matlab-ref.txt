@@ -1,0 +1,50 @@
+Informal write-up for Matlab intoductory laboratory
+
+Below is a compiled Quick Reference Guide to matlab. All info taken from
+laboratory exercise.
+
+-> Use a colon to specify a range of number, for example D = 1:5 creates a
+vector with the numbers 1 through 5 (inclusive). You can also specify a
+step value (G =1:2:10)
+
+-> Remember these important points about Matlab:
+   -> 1-based subscripts:  Forget about C/Java/Scheme for the time-being.
+   -> Flexible subscripting:  Another array can be used as a subscript for
+    multiple elements.
+   -> Parentheses () not brackets [] are used for subscripts. Brackets [] 
+   are used to construct arrays.
+
+-> Matlab can do vector comparisons. (E<0)
+
+-> The command: help function 
+   displays some basic (and some times not-so-basic) information about 
+   the command function in your command window. You can open the same (and
+   more) information in an interactive help window by using the command 
+
+-> use doc function to access documentation
+
+-> to search for a keyword use "lookfor" command
+
+-> arrayfun applies a function to the specified matrix. eg:
+   anotherFunHandle =   @(x)log(abs(x)+1);
+   B = arrayfun( anotherFunHandle, B ) % B already exists here
+
+->> Recall that do do subtraction matricies must be same size!
+-> use repmat to REPeat the MATrix across the rows of A. eg:
+    Y = repmat(X,[m n ...]);              or use
+
+-> sxfun, (Binary [operator] Singleton eXpansion) a function that can do
+ the repetition implicitly if you specify the operation on a function handle.
+
+--------------------------------Images-----------------------------------------
+-> use imread to read in an image
+
+-> if data values are unsigned, 8 bit integers than image out to be a unit8
+   var
+
+-> Display an image using imshow(I). imshow(Ir) Displays the image in the
+ new window. 
+
+-> Save a copy of your image using imwrite. note PNG are lossless
+
+-> rgb2gray converts image to grayscale
